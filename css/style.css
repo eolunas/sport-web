@@ -1,0 +1,113 @@
+/* ------------   Importación     ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* ------------    Variables      ------------ */
+:root {
+  --AzulGrisOscuro: #1e1e26;
+  --AzulOscuro: #232851;
+  --CelesteBrillante: #3cddf3;
+  --GrisClaro: rgb(249, 249, 249);
+  --Violeta: #8b48bf;
+  --VioletaOpaco: #8b48bfb2;
+}
+
+/* ------------ Estilos generales ------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.6rem;
+}
+.toggle-mobile {
+  display: none;
+}
+/* ------------  Estilos header   ------------ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #00669f;
+  box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.25);
+}
+.logo-home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-home img {
+  width: 8rem;
+  margin: 2rem;
+}
+header h1 {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.purple-button {
+  background-color: var(--Violeta);
+  border-radius: 5rem;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  height: 4rem;
+  padding: 1rem;
+  width: 13.4rem;
+}
+.purple-button:hover {
+  background-color: var(--VioletaOpaco);
+}
+
+.burger-menu {
+  display: flex;
+}
+/* ------------  Estilos nav menu ------------ */
+nav {
+  height: 3rem;
+  background-color: #001d2d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 1rem 2rem;
+  font-size: 1.6rem;
+}
+nav ul a {
+  text-decoration: none;
+  margin-left: 2rem;
+  color: #ffffff;
+}
+/* ------------    Estilos main   ------------ */
+
+/* ------------   Estilos footer  ------------ */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00669f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* ------------   Media Queries ------------ */
+/* Tablet */
+@media screen and (min-width: 480px) {
+  .toggle-mobile {
+    display: flex;
+  }
+  .burger-menu {
+    display: none;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+}
