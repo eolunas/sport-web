@@ -29,27 +29,15 @@ body {
 }
 /* ------------  Estilos header   ------------ */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background-color: #00669f;
-  box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.25);
-}
-.logo-home {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
 }
-.logo-home img {
-  width: 8rem;
-  margin: 2rem;
-}
-header h1 {
-  color: #ffffff;
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 400;
+.main-logo img {
+  display: flex;
+  align-items: center;
+  height: 3rem;
 }
 .purple-button {
   background-color: var(--Violeta);
@@ -64,47 +52,190 @@ header h1 {
 .purple-button:hover {
   background-color: var(--VioletaOpaco);
 }
-
 .burger-menu {
   display: flex;
 }
+.burger-menu img {
+  width: 4rem;
+}
+header button.purple-button {
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+}
 /* ------------  Estilos nav menu ------------ */
 nav {
-  height: 3rem;
-  background-color: #001d2d;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 3rem;
   justify-content: flex-end;
 }
 nav ul {
   display: flex;
+  font-size: 1.3rem;
+  font-weight: 500;
   list-style: none;
   margin: 1rem 2rem;
-  font-size: 1.6rem;
+  color: #242e52;
 }
 nav ul a {
-  text-decoration: none;
   margin-left: 2rem;
-  color: #ffffff;
+  text-decoration: none;
 }
+
 /* ------------    Estilos main   ------------ */
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.welcome-image {
+  flex-basis: 50%;
+}
+.welcome-image img {
+  min-width: 30rem;
+  width: 100%;
+}
+.welcome-text {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+  padding: 4rem 0;
+}
+.welcome-text :nth-child(1) {
+  color: #232c50;
+  text-align: right;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 114.6%;
+  letter-spacing: -1.75px;
+}
+.welcome-text :nth-child(2) {
+  color: #000;
+  text-align: right;
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 157.1%;
+}
+
+.pros-presentation {
+  background-color: var(--CelesteBrillante);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem;
+  color: #fff;
+}
+.pros-presentation :nth-child(1) {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 114.6%;
+  padding-bottom: 5rem;
+}
+.pros-presentation :nth-child(2) {
+  flex-basis: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 151.1%;
+}
+
+.blue-button {
+  background: #232c50;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  cursor: pointer;
+  height: 4rem;
+  padding: 1rem;
+  width: 13.4rem;
+}
 
 /* ------------   Estilos footer  ------------ */
 footer {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #00669f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #1e1e26;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.footer-container {
+  width: 100%;
+}
+.footer-container form {
+  display: flex;
+  justify-content: center;
+  padding: 0 5rem;
+}
+.footer-container form input {
+  background: #fff;
+  border-radius: 50px;
+  height: 4rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  width: 100%;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 2rem;
+}
+.footer-nav ul {
+  list-style: none;
+}
+.footer-nav ul li {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+}
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-media-icon {
+  padding-right: 2rem;
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.copyright {
+  color: #8c8c94;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 /* ------------   Media Queries ------------ */
 /* Tablet */
 @media screen and (min-width: 480px) {
   .toggle-mobile {
-    display: flex;
+    display: block;
+  }
+  header {
+    padding: 4rem 10rem;
   }
   .burger-menu {
     display: none;
+  }
+  .home-banner {
+    flex-direction: row;
+    padding: 0 10rem;
+  }
+  .pros-presentation {
+    background-color: var(--Violeta);
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem 10rem;
+  }
+  .pros-presentation :nth-child(1) {
+    padding-bottom: 0;
   }
 }
 
