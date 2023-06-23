@@ -94,6 +94,7 @@ nav ul a {
 }
 .welcome-image img {
   min-width: 30rem;
+  max-width: 62rem;
   width: 100%;
 }
 .welcome-text {
@@ -134,15 +135,37 @@ nav ul a {
   line-height: 114.6%;
   padding-bottom: 5rem;
 }
-.pros-presentation :nth-child(2) {
+.pros-presentation :nth-child(2) span {
   flex-basis: 50%;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 151.1%;
 }
 
-.blue-button {
-  background: #232c50;
+.best-team-banner {
+  color: #fff;
+  background-color: var(--CelesteBrillante);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.best-team-banner :nth-child(1) {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: 119.6%;
+  margin: 4rem 8rem 5rem 8rem;
+}
+
+.best-team-banner :nth-child(2) {
+  margin-bottom: 4rem;
+}
+
+.best-team-button {
+  background-color: #232c50;
   border-radius: 50px;
   border-style: none;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
@@ -159,12 +182,13 @@ footer {
   background-color: #1e1e26;
   display: flex;
   flex-direction: column;
-  gap: 25px;
   justify-content: center;
   padding: 4rem 0;
 }
 .footer-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .footer-container form {
   display: flex;
@@ -195,12 +219,16 @@ footer {
   text-decoration: none;
   color: #fff;
 }
+.footer-icon-links {
+  display: flex;
+  flex-direction: column;
+}
 .social-media {
   display: flex;
   justify-content: space-evenly;
 }
 .social-media-icon {
-  padding-right: 2rem;
+  padding: 0 2rem;
 }
 .footer-logo {
   display: flex;
@@ -214,7 +242,7 @@ footer {
 }
 /* ------------   Media Queries ------------ */
 /* Tablet */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .toggle-mobile {
     display: block;
   }
@@ -231,14 +259,63 @@ footer {
   .pros-presentation {
     background-color: var(--Violeta);
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 3rem 10rem;
   }
   .pros-presentation :nth-child(1) {
     padding-bottom: 0;
+    flex-basis: 40%;
   }
-}
+  .pros-presentation :nth-child(2) {
+    flex-basis: 40%;
+  }
+  .pros-presentation :nth-child(2) :nth-child(1){
+    display: none;
+  }
+  .pros-presentation :nth-child(2) :nth-child(2)::before {
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet consequat purus sit amet sodales. In faucibus ut nisi eu dignissim. Vestibulum fringilla velit sed tincidunt tincidunt.";
+  }
 
-/* Desktop */
-@media screen and (min-width: 1440px) {
+  .best-team-banner {
+    color: #fff;
+    background-color: var(--Violeta);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .best-team-banner :nth-child(1) {
+    margin: 6.4rem  10rem;
+    flex-basis: 30%;
+  }
+
+  .best-team-banner :nth-child(2) {
+    margin: 10rem 15rem;
+  }
+  .best-team-button {
+    background-color: white;
+    color: var(--Violeta);
+  }
+
+  footer {
+    align-items: flex-end;
+    padding: 6rem 10rem;
+  }
+  .footer-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .footer-icon-links {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .social-media-icon {
+    padding: 0 0.5rem;
+  }
+  .footer-nav {
+    flex-basis: 50%;
+    padding: 0;
+  }
+  .footer-container form {
+    padding: 0;
+  }
 }
