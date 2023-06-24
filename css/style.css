@@ -5,10 +5,12 @@
 :root {
   --AzulGrisOscuro: #1e1e26;
   --AzulOscuro: #232851;
+  --AzulOscuroText: #242e52;
   --CelesteBrillante: #3cddf3;
-  --GrisClaro: rgb(249, 249, 249);
+  --GrisClaro: #f9f9f9;
   --Violeta: #8b48bf;
   --VioletaOpaco: #8b48bfb2;
+  --VioletaOscuro: #8b48bf4d;
 }
 
 /* ------------ Estilos generales ------------ */
@@ -19,6 +21,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Be Vietnam Pro", sans-serif;
@@ -45,8 +48,12 @@ header {
   border-style: none;
   color: white;
   cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
   height: 4rem;
   padding: 1rem;
+  text-align: center;
+  text-decoration: none;
   width: 13.4rem;
 }
 .purple-button:hover {
@@ -69,25 +76,25 @@ nav {
   justify-content: flex-end;
 }
 nav ul {
+  color: var(--AzulOscuroText);
   display: flex;
   font-size: 1.3rem;
   font-weight: 500;
   list-style: none;
   margin: 1rem 2rem;
-  color: #242e52;
 }
 nav ul a {
   margin-left: 2rem;
   text-decoration: none;
 }
 nav ul a:hover {
-  color: rgba(36, 46, 82, 0.60);
+  color: #242e5299;
 }
 /* ------------    Estilos main   ------------ */
 .home-banner {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
 }
@@ -95,25 +102,25 @@ nav ul a:hover {
   flex-basis: 50%;
 }
 .welcome-image img {
-  min-width: 30rem;
   max-width: 62rem;
+  min-width: 30rem;
   width: 100%;
 }
 .welcome-text {
-  display: flex;
-  width: 400px;
-  flex-direction: column;
   align-items: flex-end;
+  display: flex;
+  flex-direction: column;
   gap: 28px;
   padding: 4rem 0;
+  width: 400px;
 }
 .welcome-text :nth-child(1) {
   color: #232c50;
-  text-align: right;
   font-size: 5rem;
   font-weight: 700;
-  line-height: 114.6%;
   letter-spacing: -1.75px;
+  line-height: 114.6%;
+  text-align: right;
 }
 .welcome-text :nth-child(2) {
   color: #000;
@@ -124,13 +131,13 @@ nav ul a:hover {
 }
 
 .pros-presentation {
+  align-items: center;
   background-color: var(--CelesteBrillante);
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   padding: 3rem;
-  color: #fff;
 }
 .pros-presentation :nth-child(1) {
   font-size: 3.6rem;
@@ -145,9 +152,9 @@ nav ul a:hover {
   line-height: 151.1%;
 }
 .comments-container {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   padding: 2rem 0;
 }
 .pro-comment {
@@ -156,7 +163,7 @@ nav ul a:hover {
 }
 .pro-comment :nth-child(1) {
   align-items: center;
-  background-color: rgba(139, 72, 191, 0.3);
+  background-color: var(--VioletaOscuro);
   border-radius: 50px 0px 0px 50px;
   color: #323851;
   display: flex;
@@ -169,42 +176,42 @@ nav ul a:hover {
   background-color: var(--Violeta);
   border-radius: 30px;
   color: #fff;
-  padding: 1rem 2.5rem;
   margin-right: 1rem;
+  padding: 1rem 2.5rem;
 }
 .pro-comment :nth-child(2) {
   color: #b3b2b7;
   font-size: 1.63rem;
   font-weight: 500;
-  line-height: 156.6%;
   letter-spacing: -0.163px;
-  padding-top: 2.1rem;
+  line-height: 156.6%;
   margin: 1rem;
+  padding-top: 2.1rem;
 }
 
 .best-month-banner {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1rem 2em 5rem 2rem;
 }
 .best-month-banner h3 {
   color: #242e53;
-  text-align: center;
   font-size: 3.9rem;
   font-weight: 700;
-  line-height: 156.6%;
   letter-spacing: -0.392px;
+  line-height: 156.6%;
   padding-bottom: 11rem;
+  text-align: center;
 }
 .best-month-banner article {
   display: flex;
 }
 .card {
+  align-items: center;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #FAFAFA;
   margin-bottom: 4.5rem;
 }
 .card :nth-child(1) {
@@ -212,10 +219,10 @@ nav ul a:hover {
   position: relative;
   top: -1.5rem;
 }
-.card :nth-child(1) img{
-  max-width: 10rem;
-  max-height: 10rem;
+.card :nth-child(1) img {
   border-radius: 50%;
+  max-height: 10rem;
+  max-width: 10rem;
 }
 .card :nth-child(2) {
   color: #3f4868;
@@ -229,28 +236,28 @@ nav ul a:hover {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 156.6%;
-  text-align: center;
   padding: 2.1rem;
+  text-align: center;
 }
-.card-mobile-toggle{
+.card-mobile-toggle {
   display: none;
 }
 
 .best-team-banner {
-  color: #fff;
+  align-items: center;
   background-color: var(--CelesteBrillante);
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 .best-team-banner :nth-child(1) {
-  text-align: center;
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: -0.2px;
   line-height: 119.6%;
   margin: 4rem 8rem 5rem 8rem;
+  text-align: center;
 }
 .best-team-banner :nth-child(2) {
   margin-bottom: 4rem;
@@ -276,9 +283,9 @@ footer {
   padding: 4rem 0;
 }
 .footer-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .footer-container form {
   display: flex;
@@ -289,8 +296,8 @@ footer {
   background: #fff;
   border-radius: 50px;
   height: 4rem;
-  padding-left: 1rem;
   margin-right: 1rem;
+  padding-left: 1rem;
   width: 100%;
 }
 .footer-nav {
@@ -302,15 +309,15 @@ footer {
   list-style: none;
 }
 .footer-nav ul li {
-  padding-bottom: 2rem;
   font-size: 1.6rem;
+  padding-bottom: 2rem;
 }
 .footer-nav ul li a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 .footer-nav ul li a:hover {
-  color:var(--Violeta);
+  color: var(--Violeta);
 }
 .footer-icon-links {
   display: flex;
@@ -356,8 +363,8 @@ footer {
     padding: 3rem 10rem;
   }
   .pros-presentation :nth-child(1) {
-    padding-bottom: 0;
     flex-basis: 40%;
+    padding-bottom: 0;
   }
   .pros-presentation :nth-child(2) {
     flex-basis: 40%;
@@ -369,10 +376,10 @@ footer {
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet consequat purus sit amet sodales. In faucibus ut nisi eu dignissim. Vestibulum fringilla velit sed tincidunt tincidunt.";
   }
   .comments-container {
+    background-color: #fafafa;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #fafafa;
   }
   .pro-comment {
     flex-basis: 40%;
@@ -387,19 +394,19 @@ footer {
   .best-month-banner {
     padding: 9.7rem 7rem 18rem 7rem;
   }
-  .card-mobile-toggle{
+  .card-mobile-toggle {
     display: flex;
   }
 
   .best-team-banner {
-    color: #fff;
     background-color: var(--Violeta);
+    color: #fff;
     flex-direction: row;
     justify-content: space-between;
   }
   .best-team-banner :nth-child(1) {
-    margin: 6.4rem 10rem;
     flex-basis: 30%;
+    margin: 6.4rem 10rem;
   }
   .best-team-banner :nth-child(2) {
     margin: 10rem 15rem;

@@ -30,7 +30,7 @@
           <li><a href="#">Community</a></li>
         </ul>
       </nav>
-      <button class="purple-button toggle-mobile">Contact</button>
+      <a class="purple-button toggle-mobile" href="#contact-section">Contact</a>
       <div class="burger-menu">
         <img src="img/icon-hamburger.svg" alt="icono burger" />
       </div>
@@ -46,7 +46,7 @@
             The final Open of the 2022 World Padel Tour season is underway,
             don't miss out on any of the action!
           </p>
-          <button class="purple-button">Contact</button>
+          <a class="purple-button" href="#contact-section">Contact</a>
         </article>
       </section>
       <section class="pros-banner">
@@ -134,12 +134,16 @@
     </main>
     <footer>
       <section class="footer-container">
-        <form action="form.html">
+        <form id="contact-section" action="form.html">
           <input
-            type="text"
-            name="name"
+            type="email"
+            name="email"
             id="name"
+            size="32"
+            minlength="3"
+            maxlength="64"
             placeholder="Update in your inbox..."
+            pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
             required
           />
           <button class="purple-button" type="submit">Go</button>
